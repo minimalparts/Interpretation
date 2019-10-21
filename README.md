@@ -5,7 +5,7 @@ Basic code to run a simple reference task as negative sampling. Run with:
     python3 embed_model.py
 
 
-The negative sampling implementation is contained in utils/ext2vec.py. For now, it uses a barebone implementation with a target matrix of words and a context matrix of image vectors. The task the network has to solve is to tell whether some image can be referred to as <word> or not. Positive and negative examples are given. 
+The negative sampling implementation is contained in *utils/ext2vec.py*. For now, it uses a barebone implementation with a target matrix of words and a context matrix of image vectors. Given a word / image pair, the task the network has to solve is to tell whether or not the image can be referred to using the word. Positive and negative examples are given. 
 
 The image matrix is frozen, ensuring image representations do not change in the course of training. The target word matrix, however, is randomly initialised, and is updated by backpropagation.
 
